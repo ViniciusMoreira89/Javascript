@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(131, 131, 233);
+            color: white;/*comentario em css e javascript*/
+            font: normal 20px Arial;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição</p><!--Comentário em html-->
+    <script>
+       var n1 = Number.parseInt(window.prompt('Digite um numero inteiro: '))//inteiro
+       var n2 = Number.parseFloat(window.prompt('Digite outro numero com decimal: '))//float
+       var n3 = Number(window.prompt('Digite um numero inteiro ou decimal: '))//numero automatico
+       var somaNumber = n1 + n2 + n3
+       var somaString = String(n1) + String(n3) + n3.toString()//conversao para string, forma nova e antiga
+       //(number + number) para adição
+       //(string + string) para concatenação
+       window.alert(`A soma dos números é ${somaNumber}`)//forma moderna, usar craze
+       window.alert('A junção dos números é: '+somaString)//concatenacao
+    </script>
+</body>
+</html>

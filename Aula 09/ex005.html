@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(110, 185, 247);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando studos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id='msg'>Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]//numero = ordem das tags
+        var p2 = window.document.getElementsByTagName('p')[1]//elementS com S tem que usar o colchetes
+        var titulo = window.document.getElementsByTagName('h1')[0]
+        p1.style.color='blue'
+        corpo.style.background = 'red'
+        window.document.write('Cópia do primeiro paragrafo: '+p1.innerText+'<br>')//innertext vem só o texto
+        document.write(p2.innerHTML)//innethtml vem com a formatação
+        window.alert(titulo.innerText)
+        document.write('<br>Outra parte da aula, ver código<br>')
+        var d = window.document.getElementById('msg')//id, no caso ali na div
+        d.style.background = 'green'
+        //d.innerText = 'Estou aguardando'
+        document.getElementById('msg').innerText='Estou aguardando'//dessa forma nao precisa criar variavel, pode escrever o comando completo, grande demais
+        document.write('<br><br>Usando query selector:<br>')//navegadores antigos nao tem suporte
+        var y = window.document.querySelector('div#msg')//class usa ponto, id usa hashtag
+        y.style.color='blue'
+    </script>
+</body>
+</html>

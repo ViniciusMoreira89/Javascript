@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">Km/h
+    <input type="button" value="Verificar" onclick="limite()">
+    <div id='resultado'></div>
+    <script>
+        var velocidade = document.getElementById('txtvel')
+        var res = document.getElementById('resultado')
+        function limite() {
+            if(velocidade.value>70){//.value pra transformar em numero antes da comparacao, direto no if pra nao ter que criar outra variavel só pra transformar em Number
+                window.alert('Você ultrapassou o limite de velocidade')
+                res.innerText = 'Você ultrapasou o limite de velocidade'
+                res.style.background = 'red'
+                res.style.width = '150px'
+                res.style.color = 'white'
+            }else{
+                window.alert('Sua velocidade está ok')
+                res.innerText = 'Sua velocidade está ok'
+                res.style.background = 'blue'
+                res.style.width = '150px'
+                res.style.color = 'pink'
+            }
+        }
+    </script>
+</body>
+</html>
